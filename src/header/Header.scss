@@ -1,0 +1,101 @@
+@import '../styles/colors.scss';
+
+.header-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7.1rem;
+    top: 40px;
+    width: 80%;
+    background: #FFFFFF;
+    border-radius: 1rem;
+    right: 50%;
+    transform: translate(50%);
+
+    .header-logo-group {
+        display: inline-flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2.6rem;
+        width: 12%;
+
+        .header-text {
+            opacity: 65%;
+            font-weight: bolder;
+        }
+    }
+
+    .nav {
+        align-items: center;
+        height: 7.1rem;
+        width: 60%;
+        flex-wrap: nowrap;
+
+        .nav-item {
+            height: 100%;
+            margin-left: 2.4rem;
+            margin-right: 2.4rem;
+
+            li {
+                height: 100%;
+
+                a {
+                    text-decoration: none;
+                    color: $black;
+                    font-weight: 500;
+                }
+
+                .nav-link {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    color: $black;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    &:active, &.active {
+                        color: $active-orange ;
+                        border-top: .3rem $active-orange solid;
+                        
+                        a {
+                            color: $active-orange;
+                        }
+                    }                    
+                }
+            }
+        }
+    }
+
+    .options {
+        display: inline-flex;
+        height: 100%;
+        width: 20%;
+        align-items: center;
+        justify-content: space-around;
+        
+        .lang-settings {    
+            display: inline-flex;
+            width: 35%;
+            justify-content: space-between;
+
+            span {
+                cursor: pointer;
+                color: $active-orange;
+                border-radius: 50%;
+                padding: .4rem;
+                &.active {
+                    border: .1rem $active-orange solid;
+                }
+            }
+        }
+
+        .entrance {
+            color: $active-orange;
+            span {
+                margin-left: .7rem;
+            }
+        }
+    }
+}

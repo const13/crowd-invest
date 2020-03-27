@@ -1,0 +1,76 @@
+@import '../styles/colors.scss';
+
+.howitworks {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    padding-top: 10rem;
+
+    .howitworks-container {
+        position: relative;
+        display: inline-flex;
+        width: 80%;
+        left: 10%;
+
+        .howitworks-steps {
+            display: inline-flex;
+            flex-flow: column;
+            width: 27%;
+            margin-right: 6rem;
+            margin-bottom: 3rem;
+
+            .steps-title {
+                font-family: Montserrat;
+                font-weight: 600;
+                font-size: 2.4rem;
+                line-height: 3.8rem;
+                letter-spacing: 0.002em;
+                color: $black;
+                margin-bottom: 4rem;
+            }
+
+            .step-arrow {
+                left: 4rem;
+                position: relative;
+            }
+
+            .hoitworks-step {
+                margin: 2.5rem;
+                margin-right: 0;
+
+                span {
+                    margin-left: 2.5rem;
+                    font-weight: 500;
+                    font-size: 1.8rem;
+                    line-height: 2.1rem;
+                }
+            }
+
+            .invest {
+                width: 22.8rem !important;
+                height: 6.1rem !important;
+                margin-left: 2.5rem;
+                margin-top: 2rem;
+            }
+        }
+        
+    }
+
+    .desc {
+        padding-left: 6rem;
+        border-left: 0.05rem solid $gray6;;
+        .desc-title {
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 2.4rem;
+            line-height: 3.8rem;
+            margin-bottom: 4rem;
+            padding-top: 2rem;
+        }
+
+        .desc-scheme {
+            margin-bottom: 14rem;
+        }
+    }
+}

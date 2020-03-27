@@ -1,0 +1,30 @@
+@import '../styles/colors.scss';
+
+.btn {
+    &.outline-orange {
+        color: $active-orange !important;
+        background: $gray4 !important;
+        border: .1rem solid $gray5 !important;
+        border-radius: 1rem !important;
+        &:active {
+            color: $active-orange !important;
+        }
+    }
+}
+
+.custom-btn-1 {
+    color: $gray;
+    height: 6.1rem;
+    width: 28.2rem;;
+    font-family: Roboto;
+    font-style: normal;
+    background: $active-orange;
+    border-color: $active-orange;
+    border-radius: .6rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    letter-spacing: 0.03em;
+    font-variant: small-caps;
+}

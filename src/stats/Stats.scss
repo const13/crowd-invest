@@ -1,0 +1,122 @@
+@import '../styles/colors.scss';
+
+.stats {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+
+    .list {
+        position: relative;
+        margin-top: 10rem;
+        width: 80%;
+        display: inline-flex;
+        justify-content: space-between;
+        margin-bottom: 10rem;
+
+        .list-item {
+            display: inline-flex;
+            flex-flow: column;
+            width: 27%;
+            justify-content: flex-end;
+
+            svg {
+                display: inline-flex;
+            }
+             
+            .citata {
+                margin-top: 4rem;
+                margin-bottom: 4rem;
+                color: $blue;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                letter-spacing: 0.002em;
+            }
+
+            a {
+                color: $active-orange;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                letter-spacing: 0.002em;
+                text-decoration: none;
+                
+                svg {
+                    display: none;
+                    margin-left: 1rem;
+                }
+
+                &:hover {
+                    svg {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+
+    .tablets {
+        position: relative;
+        margin-top: 2rem;
+        width: 80%;
+        display: inline-flex;
+        flex-flow: column;
+        justify-content: space-between;
+        margin-bottom: 10rem;
+        
+        &>:first-child {
+            margin-bottom: 4rem;
+        }
+
+        .block {
+            display: inline-flex;
+            width: 100%;
+
+            .tab {
+                display: inline-flex;
+                flex-flow: column;
+                position: relative;
+                height: 22.8rem;
+                //width: 31.2rem;
+                flex: 1;
+                border-radius: .4rem;
+                padding: 4rem 1rem 1rem 3.5rem;
+
+                &.odd {
+                    background-color: $dark-blue;
+                    color: $white;
+                }
+
+                &.even {
+                    background-color: $white;
+                    color: $dark-blue;
+                }
+
+                .title {
+                    position: relative;
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 4.6rem;
+                    line-height: 5.6rem;
+                }
+
+                .subtitle {
+                    position: relative;
+                    top: 2rem;
+                    width: 65%;
+                    font-family: Roboto;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                }
+            }
+        }
+    }
+}
