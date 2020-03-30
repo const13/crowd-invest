@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Investors from './investors/Investors';
 import Header from './header/Header'; 
+import Footer from './footer/Footer'; 
 
 class App extends React.Component {
   render () {
@@ -18,7 +19,10 @@ class App extends React.Component {
             <Route exact path="/">
               <Investors />
             </Route>
-          </Switch>
+        </Switch>
+        
+        <Footer />
+
       </Router>
   );
   }

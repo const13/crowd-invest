@@ -1,4 +1,4 @@
-@import '../styles/colors.scss';
+@import '../styles/colors';
 
 .howitworks {
     display: inline-flex;
@@ -59,7 +59,9 @@
 
     .desc {
         padding-left: 6rem;
-        border-left: 0.05rem solid $gray6;;
+        border-left: 0.05rem solid $gray6;
+        width: 69%;
+
         .desc-title {
             font-family: Montserrat;
             font-weight: 600;

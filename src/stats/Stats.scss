@@ -1,4 +1,5 @@
-@import '../styles/colors.scss';
+@import '../styles/colors';
+@import '../styles/general.scss';
 
 .stats {
     display: flex;
@@ -36,27 +37,7 @@
                 letter-spacing: 0.002em;
             }
 
-            a {
-                color: $active-orange;
-                font-family: Montserrat;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 1.8rem;
-                line-height: 2.4rem;
-                letter-spacing: 0.002em;
-                text-decoration: none;
-                
-                svg {
-                    display: none;
-                    margin-left: 1rem;
-                }
-
-                &:hover {
-                    svg {
-                        display: inline;
-                    }
-                }
-            }
+            
         }
     }
 

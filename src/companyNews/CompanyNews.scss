@@ -1,0 +1,39 @@
+@import '../styles/colors';
+@import '../styles/general';
+
+
+.company-news {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    .title {
+        height: 8rem;
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        color: $black;
+        margin: 1.6rem 0;
+    }
+
+    .content {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.002em;
+        color: $blue;
+        margin-bottom: 3.6rem;
+    }
+    
+    a {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 1.6rem;
+        font-weight: 900;
+        font-size: 1.4rem !important;
+        line-height: 2.6rem;
+    }
+
+    
+}

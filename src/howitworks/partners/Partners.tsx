@@ -1,12 +1,12 @@
 import React from 'react';
 import './Partners.scss';
 import {ReactComponent as Google} from '../../img/Google.svg';
-import {ReactComponent as AstellKern} from '../../img/astell-kern.svg';
-import {ReactComponent as HarmanKardon} from '../../img/Harman_Kardon.svg';
-import {ReactComponent as Marshall} from '../../img/Marshall.svg';
+// import {ReactComponent as AstellKern} from '../../img/astell-kern.svg';
+// import {ReactComponent as HarmanKardon} from '../../img/Harman_Kardon.svg';
+// import {ReactComponent as Marshall} from '../../img/Marshall.svg';
+// import {ReactComponent as Yandex} from '../../img/Yandex.svg';
 import {ReactComponent as MediaMarkt} from '../../img/Media_Markt.svg';
 import {ReactComponent as Mercedes} from '../../img/mercedes.svg';
-import {ReactComponent as Yandex} from '../../img/Yandex.svg';
 
 export class Partners extends React.Component {
     render () {

@@ -1,0 +1,65 @@
+@import '../styles/colors';
+
+.horizontal-list-container {
+    display: inline-flex;
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+
+    .horizontal-list-content {
+        display: inline-flex;
+        width: 80%;
+        flex-flow: column;
+
+        & > .title {
+            max-width: 43rem;
+            color: $black;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 3.6rem;
+            line-height: 4.4rem;
+            letter-spacing: 0.002em;
+            margin-bottom: 3rem;
+        }
+
+        .list {
+            display: inline-flex;
+            width: 100%;
+            margin-bottom: 6rem;
+            justify-content: space-between;
+        
+            .list-item {
+                display: inline-flex;
+                flex-flow: column;
+                width: 23%;
+                cursor: pointer;
+                padding: 1.6rem;
+                background: $white;
+                border: 1px solid $white;
+                box-sizing: border-box;
+                box-shadow: 0 .4rem 2rem rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                
+                &:hover {
+                    box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+
+        .btn-container {
+            display: inline-flex;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 6rem;
+
+            .btn {
+                font-weight: 500;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                letter-spacing: 0.03em;
+                font-variant: small-caps;
+            }
+        }
+    }
+}

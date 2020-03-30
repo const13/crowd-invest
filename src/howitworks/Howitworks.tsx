@@ -8,6 +8,7 @@ import Scheme from '../img/scheme.png';
 import {ReactComponent as Bank} from '../img/icons/bank.svg';
 import Button from 'react-bootstrap/Button'
 import Partners from './partners/Partners';
+import CollapsibleBlock from '../collapsibleBlock/CollapsibleBlock';
 
 export class Howitworks extends React.Component {
     render () {
@@ -42,7 +43,10 @@ export class Howitworks extends React.Component {
                         <h1 className="desc-title">Как мы работаем:</h1>
                         <img src={Scheme} alt="scheme" className="desc-scheme" />
                         <div className="faq">
-                            <div className="question"></div>
+                            <CollapsibleBlock title={'А зачем первый вопрос?'} content={'Да просто так!'} />
+                            <CollapsibleBlock title={'А зачем второй вопрос?'} content={'Да просто так же!'} />
+                            <CollapsibleBlock title={'А зачем третий?'} content={'Лучше не спрашивай...'} />
+                            <CollapsibleBlock title={'Не открывать'} content={'Иди нахер!'} />
                         </div>
                     </div>
                 </div>

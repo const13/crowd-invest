@@ -18,17 +18,17 @@ export class Stats extends React.Component {
                 <div className="list-item">
                     <div><Forbes /></div>
                     <span className="citata">“Мы никогда не видели настолько быстрорастущую компанию, очень круто, очень современно и стильно.”</span>
-                    <Link to="/">Читать<ArrowRight /></Link>
+                    <Link to="/" className="orange">Читать<ArrowRight /></Link>
                 </div>
                 <div className="list-item">
                     <div><LogoCopy /></div>
                     <span className="citata">“Цитата, буквально в пару строк, чтобы зацепить внимание любимейшего  пользователя.”</span>
-                    <Link to="/">Читать<ArrowRight /></Link>
+                    <Link to="/" className="orange">Читать<ArrowRight /></Link>
                 </div>
                 <div className="list-item">
                     <div><Investor /></div>
                     <span className="citata">“А тут еще одна цитата, только уже от другого издания, посмотрим, что они про нас пишут.”</span>
-                    <Link to="/">Читать<ArrowRight /></Link>
+                    <Link to="/" className="orange">Читать<ArrowRight /></Link>
                 </div>
             </section>
             <section className="tablets">

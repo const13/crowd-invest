@@ -1,7 +1,8 @@
-@import '../styles/colors.scss';
+@import '../styles/colors';
 
 .btn {
     &.outline-orange {
+        font-weight: 500;
         color: $active-orange !important;
         background: $gray4 !important;
         border: .1rem solid $gray5 !important;
