@@ -5,7 +5,7 @@
         font-weight: 500;
         color: $active-orange !important;
         background: $gray4 !important;
-        border: .1rem solid $gray5 !important;
+        border: 0.1rem solid $gray5 !important;
         border-radius: 1rem !important;
         &:active {
             color: $active-orange !important;
@@ -21,7 +21,7 @@
     font-style: normal;
     background: $active-orange;
     border-color: $active-orange;
-    border-radius: .6rem;
+    border-radius: 0.6rem;
     font-weight: bold;
     font-size: 1.6rem;
     line-height: 2rem;

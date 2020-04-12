@@ -2,16 +2,26 @@ import React from 'react';
 import './Slide.scss';
 import Button from 'react-bootstrap/Button'
 
-export class Slide extends React.Component {
+interface Props {
+    background?: any;
+    title?: string;
+    subtitle?: string;
+    buttonName?: string;
+}
+
+export class Slide extends React.Component<Props> {
     render () {
+        let { background, buttonName, subtitle, title } = this.props;
+        const divStyle = {
+            backgroundImage: `url(${background})`,
+        };
         return (
-        <section className="slide">
+        <section className="slide" style={divStyle}>
             <section className='slide-content'>
-                <h1 className='slide-title'>Площадка для инвестирования в успешные компании</h1>
-                <h2 className='slide-subtitle'>Мы позаботимся о юридическом оформлении сделок и исполнения обязательств проектами</h2>
-                <Button bsPrefix='btn custom-btn-1'>{'Зарегестрироваться'.toUpperCase()}</Button>
+                {title && <h1 className='slide-title'>{title}</h1>}
+                {subtitle && <h2 className='slide-subtitle'>{subtitle}</h2>}
+                {buttonName && <Button bsPrefix='btn custom-btn-1'>{buttonName.toUpperCase()}</Button>}
             </section>
-            {/* <img src={background} alt='background' className='slide-background'></img> */}
         </section>
         );
     } 

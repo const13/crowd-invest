@@ -20,32 +20,40 @@ export class Footer extends React.Component {
                 <div className="footer-logo">
                     <img src={logo} alt="logo" />
                     <span className="copyright">©2019</span>
-                </div>
-                <div className="footer-nav-links">
-                    <div className="footer-nav-links-block">
-                        <Link to='/'>Инвесторам</Link>
-                        <Link to='/'>Заемщикам</Link>
-                    </div>
-                    <div className="footer-nav-links-block">
-                        <Link to='/'>О компании</Link>
-                        <Link to='/'>Как это работает</Link>
-                    </div>
-                </div> 
-                <div className="footer-social-links123">
-                    <Facebook className="footer-social-link123" />
-                    <Slack className="footer-social-link123" />
-                    <Telegram className="footer-social-link123" />
-                </div>
-                <div className='options'>
-                    <div className='lang-settings'>
-                        <span className='lang active'>De</span>
-                        <span className='lang'>En</span>
-                    </div>
-                    <div className='entrance'>
-                        <ManIcon />
-                        <span>вход</span>
+                    <div className="footer-social-links123">
+                        <Facebook className="footer-social-link123" />
+                        <Slack className="footer-social-link123" />
+                        <Telegram className="footer-social-link123" />
                     </div>
                 </div>
+                <div className="footer-other"> 
+                    <div className="footer-nav-links">
+                        <div className="footer-nav-links-block">
+                            <Link to='/'>Инвесторам</Link>
+                            <Link to='/'>Заемщикам</Link>
+                        </div>
+                        <div className="footer-nav-links-block">
+                            <Link to='/'>О компании</Link>
+                            <Link to='/'>Как это работает</Link>
+                        </div>
+                    </div> 
+                    <div className="footer-social-links123">
+                        <Facebook className="footer-social-link123" />
+                        <Slack className="footer-social-link123" />
+                        <Telegram className="footer-social-link123" />
+                    </div>
+                    <div className='options'>
+                        <div className='lang-settings'>
+                            <span className='lang active'>De</span>
+                            <span className='lang'>En</span>
+                        </div>
+                        <div className='entrance'>
+                            <ManIcon />
+                            <span>вход</span>
+                        </div>
+                    </div>
+                </div>
+                <span className="copyright">©2019</span>
             </section>
         </footer>);
     } 

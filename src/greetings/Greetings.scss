@@ -1,12 +1,18 @@
 @import '../styles/colors';
+@import '../styles/media-queries';
 
 .greetings {
     display: inline-flex;
     width: 100%;
     align-items: center;
     background-color: $dark-blue;
-    height: 33.5rem;
+    min-height: 33.5rem;
     position: relative;
+
+    @include for-size-lower(normal) {    
+        padding-top: 6rem;
+        min-height: 40.5rem;
+    }
 
     .greetings-container {
         position: relative;
@@ -15,9 +21,20 @@
         width: 80%;
         left: 10%;
         
+        @include for-size-lower(normal) {    
+            flex-flow: column;
+            width: 90%;
+            left: 5%;
+            justify-content: center;
+        }
+
         img {
             transform: scale(1.5) translate(25%, 0);
             margin-right: 10rem;
+
+            @include for-size-lower(normal) {    
+                margin-bottom: 4.4rem;
+            }
         }
 
         .greetings-content {
@@ -25,6 +42,13 @@
             width: 100%;
             flex-flow: column;
             margin-left: 10rem;
+
+            @include for-size-lower(normal) {    
+                margin-left: 0;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
 
             .greetings-title {
                 color: $white;
@@ -47,18 +71,40 @@
                 align-items: center;
                 width: 100%;
                 margin-top: 4rem;
-
                 
+                @include for-size-lower(normal) {    
+                    justify-content: center;
+                    margin-bottom: 4rem;
+                }
+                
+                @include for-size-lower(small) {    
+                    flex-flow: column;
+                    margin-bottom: 6rem;
+                }
+
                 .greetings-link {
                     cursor: pointer;
                     display: inline-flex;
                     align-items: center;
                     padding: 2rem 3rem 2rem 3rem;
-                    border-left: 0.05rem solid rgba(256, 256, 256, .2);
+                    border-left: 0.05rem solid rgba(256, 256, 256, 0.2);
 
                     &:first-of-type {
                         padding: 2rem 3rem 2rem 0;
                         border-left: none;
+                    }
+
+                    @include for-size-lower(small) {    
+                        border-left: none;
+                        border-top: 0.05rem solid rgba(256, 256, 256, 0.2);
+                        width: 100%;
+                        padding: 4rem;
+                        justify-content: center;
+                        
+                        &:first-of-type {
+                            border-top: none;
+                            padding: 4rem;
+                        }
                     }
 
                     svg {

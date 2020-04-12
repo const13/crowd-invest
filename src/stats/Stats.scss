@@ -1,5 +1,6 @@
 @import '../styles/colors';
 @import '../styles/general.scss';
+@import '../styles/media-queries';
 
 .stats {
     display: flex;
@@ -15,11 +16,26 @@
         justify-content: space-between;
         margin-bottom: 10rem;
 
+        &.about {
+            margin-top: 0;
+        }
+        
+        @include for-size-lower(normal) {    
+            width: 90%;
+            flex-flow: column;
+            margin-bottom: 2.5rem;
+        }
+
         .list-item {
             display: inline-flex;
             flex-flow: column;
             width: 27%;
             justify-content: flex-end;
+
+            @include for-size-lower(normal) {    
+                width: 100%;
+                margin-bottom: 5rem;
+            }
 
             svg {
                 display: inline-flex;
@@ -50,32 +66,131 @@
         justify-content: space-between;
         margin-bottom: 10rem;
         
+        @include for-size-lower(normal) {    
+            width: 90%;
+        }
+
         &>:first-child {
             margin-bottom: 4rem;
+
+            @include for-size-lower(normal) {    
+                margin-bottom: 0;
+            }
+
+            .tab {
+                @include for-size-lower(normal) {    
+                    &.third {
+                        order: 4;
+                    }
+
+                    &.fourth {
+                        order: 3;
+                    }
+                }
+                
+                @include for-size-lower(small) {    
+                    &.third {
+                        order: 3;
+                    }
+
+                    &.fourth {
+                        order: 4;
+                    }
+                }
+            }
         }
 
         .block {
             display: inline-flex;
             width: 100%;
 
+            &.light {
+                color: $active-orange !important;
+            }
+
+            @include for-size-lower(normal) {    
+                flex-wrap: wrap;
+            }
+
+            &:last-of-type {
+                .tab {
+                    @include for-size-lower(normal) {    
+                        &.first {
+                            order: 1;
+                        }
+        
+                        &.second {
+                            order: 0;
+                        }
+                        
+                        &.fourth {
+                            order: 4;
+                        }
+                    }
+                    
+                    @include for-size-lower(small) {    
+                        &.first {
+                            order: 1;
+                        }
+        
+                        &.second {
+                            order: 0;
+                        }
+                        
+                        &.third {
+                            order: 5;
+                        }
+                        
+                    }
+                }
+            }
+
             .tab {
                 display: inline-flex;
                 flex-flow: column;
                 position: relative;
                 height: 22.8rem;
-                //width: 31.2rem;
+                width: 31.2rem;
                 flex: 1;
-                border-radius: .4rem;
+                border-radius: 0.4rem;
                 padding: 4rem 1rem 1rem 3.5rem;
+
+                &.light {
+                    color: $active-orange !important;
+                }
+
+                @include for-size-lower(normal) { 
+                    min-width: 300px;
+                    width: 34.8rem;
+                }
+                
+                @include for-size-lower(medium) { 
+                    min-width: 27.5rem;
+                }
 
                 &.odd {
                     background-color: $dark-blue;
                     color: $white;
+
+                    &.light {
+                        background-color: $gray-blue;
+                        .subtitle {
+                            color: $blue
+                        }
+                    }
                 }
 
                 &.even {
                     background-color: $white;
                     color: $dark-blue;
+
+                    &.light {
+                        color: $active-orange !important;
+
+                        .subtitle {
+                            color: $blue
+                        }
+                    }
                 }
 
                 .title {

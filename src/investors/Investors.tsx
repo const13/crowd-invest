@@ -8,11 +8,15 @@ import InvestRequests from '../investRequests/InvestRequests';
 import InvestRequestMock from '../mocks/investRequestMock';
 import CompanyNews from '../companyNews/CompanyNews';
 import CompanyNewsMock from '../mocks/companyNewsMock';
+import Background from "../img/image10.png";
 
 export class Investors extends React.Component {
     render () { 
         return (<div>  
-            <Slide /> 
+            <Slide title="Площадка для инвестирования в успешные компании"
+                    subtitle="Мы позаботимся о юридическом оформлении сделок и исполнения обязательств проектами"
+                    buttonName="Зарегестрироваться"
+                    background={Background} /> 
             <Tablets /> 
             <HorizontalList 
                 title={'Последние заявки для инвестирования'}

@@ -1,4 +1,5 @@
 @import '../styles/colors';
+@import '../styles/media-queries';
 
 .footer-container {
     display: flex;
@@ -9,12 +10,16 @@
         display: flex;
         flex-flow: column;
         justify-content: center;   
-        height: 42.4rem;
+        min-height: 42.4rem;
         background-position: center;
         background-size: cover;
         background-image: url('../img/footer.png');
         padding-left: 11rem;
 
+        @include for-size-lower(small) {    
+            padding-left: 0;
+            align-items: center;
+        }
 
         .footer-title {
             max-width: 44rem;
@@ -27,24 +32,52 @@
             font-variant: small-caps;
             color: $white;
             margin-bottom: 4rem;
+
+            @include for-size-lower(small) {    
+                text-align: center;
+            }
         }
         
     }
 
     .footer-links {
         position: relative;
-        width: 80%;
+        width: 85%;
         left: 10%;
-        height: 22.5rem;
+        min-height: 22.5rem;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         padding-bottom: 7rem;
         padding-top: 6rem;
 
+        @include for-size-lower(normal) {    
+            padding-top: 5rem;
+            width: 90%;
+            left: 5%;
+        }
+        
+        @include for-size-lower(small) {    
+            flex-flow: column;
+            padding-bottom: 4rem;
+        }
+
         .footer-logo {
             display: inline-flex;
             flex-flow: column;
+            position: relative;
+
+            @include for-size-lower(normal) {    
+                margin-right: 10rem;
+            }
+            
+            @include for-size-lower(small) {    
+                flex-flow: row;
+                margin-right: 0;
+                width: 100%;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
 
             .copyright {
                 margin-top: 1rem;
@@ -54,70 +87,188 @@
                 line-height: 1.6rem;
                 letter-spacing: 0.02em;
                 color: $dark-gray;
+
+                @include for-size-lower(small) {    
+                    display: none;
+                }
+            }
+
+            .footer-social-links123 {
+                display: none;
+                align-items: center;
+                height: 3rem;
+                width: 50%;
+                top: .5rem;
+                position: relative;
+
+                .footer-social-link123 {
+                    &:not(:last-child) {
+                        margin-right: 5rem;
+                    }
+                }
+
+                @include for-size-lower(small) {    
+                    display: inline-flex;
+                }
+
             }
         }
 
-        .footer-nav-links {
-            .footer-nav-links-block {
-                display: inline-flex;
-                flex-flow: column;
-
-                & > :first-of-type {
-                    margin-bottom: 3rem;
-                }
-
-                &:not(:last-child) {
-                    margin-right: 10rem;
-                }
-
-                & > a {
-                    font-size: 1.6rem;
-                    line-height: 1.9rem;
-                    letter-spacing: 0.002em;
-                    color: $blue;
-                }
-            }
-        }
-        
-        .footer-social-links123 {
+        .footer-other {
             display: inline-flex;
-            align-items: center;
-            height: 3rem;
+            width: 75%;
+            justify-content: space-between;
+            align-items: flex-start;
 
-            .footer-social-link123 {
-                &:not(:last-child) {
-                    margin-right: 5rem;
-                }
+            @include for-size-lower(normal) {    
+                flex-wrap: wrap;
             }
-        }
-
-        .options {
-            display: inline-flex;
-            width: 20%;
-            align-items: center;
-            justify-content: space-around;
             
-            .lang-settings {    
+            @include for-size-lower(small) {    
+                width: 100%;
+                flex-wrap: wrap;
+                margin-bottom: 4rem;
+            }
+
+            .footer-nav-links {
                 display: inline-flex;
-                width: 35%;
+                width: 40%;
                 justify-content: space-between;
-    
-                span {
-                    cursor: pointer;
-                    color: $active-orange;
-                    border-radius: 50%;
-                    padding: .4rem;
-                    &.active {
-                        border: .1rem $active-orange solid;
+                margin-right: 6rem;
+                margin-top: 0.5rem;
+                transition: width 0.3s;
+
+                @include for-size-lower(normal) {    
+                    order: 2;
+                    width: 70%;
+                }
+                
+                @include for-size-lower(medium) {    
+                    width: 90%;
+                }
+                
+                @include for-size-lower(small) {    
+                    order: 0;
+                    width: 100%;
+                    margin-top: 4rem;
+                    margin-right: 0;
+                    margin-bottom: 4rem;
+                    justify-content: space-around;
+                }
+
+                .footer-nav-links-block {
+                    display: inline-flex;
+                    flex-flow: column;
+
+                    & > :first-of-type {
+                        margin-bottom: 3rem;
+                    }
+
+                    & > a {
+                        font-size: 1.6rem;
+                        line-height: 1.9rem;
+                        letter-spacing: 0.002em;
+                        color: $blue;
                     }
                 }
             }
-    
-            .entrance {
-                color: $active-orange;
-                span {
-                    margin-left: .7rem;
+            
+            .footer-social-links123 {
+                display: inline-flex;
+                align-items: center;
+                height: 3rem;
+                width: 25%;
+                margin-right: 2rem;
+
+                @include for-size-lower(normal) {    
+                    width: 50%;
+                    margin-right: 0;
+                    margin-bottom: 4rem;
                 }
+
+                @include for-size-lower(small) {    
+                    display: none;
+                }
+
+                .footer-social-link123 {
+                    &:not(:last-child) {
+                        margin-right: 5rem;
+                    }
+                }
+            }
+
+            .options {
+                display: inline-flex;
+                width: 25%;
+                align-items: center;
+                justify-content: space-around;
+
+                @include for-size-lower(normal) {    
+                    width: 50%;
+                    justify-content: space-between;
+                }
+                
+                @include for-size-lower(small) {    
+                    width: 100%;
+                    justify-content: space-around;
+                }
+                
+                .lang-settings {    
+                    display: inline-flex;
+                    width: 35%;
+                    justify-content: space-between;
+                    transition: width 0.3s;
+
+                    @include for-size-lower(normal) {    
+                        width: 25%;
+                    }
+
+                    @include for-size-lower(medium) {    
+                        width: 35%;
+                    }
+                    
+                    @include for-size-lower(small) {    
+                        width: 25%;
+                    }
+
+                    span {
+                        cursor: pointer;
+                        color: $active-orange;
+                        border-radius: 50%;
+                        padding: 0.4rem;
+                        &.active {
+                            border: 0.1rem $active-orange solid;
+                        }
+                    }
+                }
+        
+                .entrance {
+                    color: $active-orange;
+                    span {
+                        margin-left: 0.7rem;
+                    }
+
+                    @include for-size-lower(small) {    
+                        width: 25%;
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            display: none;
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            letter-spacing: 0.02em;
+            color: $dark-gray;
+            width: 100%;
+            justify-content: center;
+
+            @include for-size-lower(small) {    
+                display: inline-flex;
             }
         }
     }

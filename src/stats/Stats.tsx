@@ -10,11 +10,18 @@ import {ReactComponent as Checklist} from '../img/icons/checklist.svg';
 import {ReactComponent as Percent} from '../img/icons/percent.svg';
 import {ReactComponent as Vesy} from '../img/icons/vesy.svg';
 
-export class Stats extends React.Component {
+interface Props {
+    about?: boolean
+}
+
+export class Stats extends React.Component<Props> {
     render () {
+        let { about } = this.props;
+        const listClass = `list ${about ? 'about' : null}`;
+
         return (
         <section className="stats">
-            <section className="list">
+            <section className={listClass} >
                 <div className="list-item">
                     <div><Forbes /></div>
                     <span className="citata">“Мы никогда не видели настолько быстрорастущую компанию, очень круто, очень современно и стильно.”</span>
@@ -32,42 +39,42 @@ export class Stats extends React.Component {
                 </div>
             </section>
             <section className="tablets">
-                <div className="block">
-                    <div className="tab odd">
+                <div className={`block ${about ? 'light' : null}`}>
+                    <div className={`tab odd first ${about ? 'light' : null}`}>
                         <span className="title">10&nbsp;000</span>
                         <span className="subtitle">Пользователей платформы</span>
                     </div>
-                    <div className="tab even">
+                    <div className={`tab even second ${about ? 'light' : null}`}>
                         <span className="title">100 млн</span>
                         <span className="subtitle">Привлеченных инвестиций</span>
                     </div>
-                    <div className="tab odd">
+                    <div className={`tab odd third ${about ? 'light' : null}`}>
                         <span className="title">20%</span>
                         <span className="subtitle">Средняя годовая доходность</span>
                     </div>
-                    <div className="tab even">
+                    <div className={`tab even fourth ${about ? 'light' : null}`}>
                         <span className="title">0</span>
                         <span className="subtitle">Дефолтов</span>
                     </div>
                 </div>
-                <div className="block">
-                    <div className="tab even">
+                {!about && <div className="block">
+                    <div className="tab even first">
                         <span className="title"><Percent /></span>
                         <span className="subtitle">Выгодная ставка</span>
                     </div>
-                    <div className="tab odd">
+                    <div className="tab odd second">
                         <span className="title"><APlus /></span>
                         <span className="subtitle">Скоринг</span>
                     </div>
-                    <div className="tab even">
+                    <div className="tab even third">
                         <span className="title"><Checklist /></span>
                         <span className="subtitle">Проверка заемщиков сообществом</span>
                     </div>
-                    <div className="tab odd">
+                    <div className="tab odd fourth">
                         <span className="title"><Vesy/></span>
                         <span className="subtitle">Юридическое ведение сделки</span>
                     </div>
-                </div>
+                </div>}
             </section>
         </section>
         );
