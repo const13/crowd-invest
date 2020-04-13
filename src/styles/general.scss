@@ -19,3 +19,19 @@ a.orange {
         }
     }
 }
+
+a.menu-link {
+    color: $light-blue2;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.002em;
+    text-decoration: none;
+    transition: color 0.3s;
+    
+    &:hover, &.is-active {
+        color: $active-orange;
+    }
+}

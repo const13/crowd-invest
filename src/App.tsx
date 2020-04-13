@@ -5,34 +5,45 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import ScrollToTop from "react-router-scroll-top";
+
+import Header from './header/Header';
+
 import Investors from './investors/Investors';
 import Borrowers from './borrowers/Borrowers';
 import About from './about/About';
-import Header from './header/Header'; 
 import Footer from './footer/Footer'; 
+import VideoGallery from './videoGallery/VideoGallery';
 
 class App extends React.Component {
   render () {
     return (
       <Router>
-        <Header /> 
+        <ScrollToTop>
+          <Header /> 
 
-        <Switch>
-            <Route exact path="/">
-              <Investors />
-            </Route>
-            <Route exact path="/credits">
-              <Borrowers />
-            </Route>
-            <Route exact path="/about">
-              <About />
-            </Route>
-        </Switch>
-        
-        <Footer />
+          <Switch>
+              <Route exact path="/">
+                <Investors />
+              </Route>
 
+              <Route exact path="/credits">
+                <Borrowers />
+              </Route>
+
+              <Route exact path="/about">
+                <About />
+              </Route>
+
+              <Route exact path="/howitworks">
+                <VideoGallery />
+              </Route>
+          </Switch>
+          
+          <Footer />
+        </ScrollToTop>
       </Router>
-  );
+    );
   }
 }
 

@@ -16,7 +16,7 @@ export class Borrowers extends React.Component {
                     buttonName="Подать заявку" 
                     background={Background} /> 
             <Tablets /> 
-            <Howitworks showAddons={true} />
+            <Howitworks />
             <HorizontalList 
                 title={'Новости компании'}
                 buttonLabel={'ВСЕ НОВОСТИ'} 

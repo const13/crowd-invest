@@ -30,11 +30,11 @@ export class Footer extends React.Component {
                     <div className="footer-nav-links">
                         <div className="footer-nav-links-block">
                             <Link to='/'>Инвесторам</Link>
-                            <Link to='/'>Заемщикам</Link>
+                            <Link to='/credits'>Заемщикам</Link>
                         </div>
                         <div className="footer-nav-links-block">
-                            <Link to='/'>О компании</Link>
-                            <Link to='/'>Как это работает</Link>
+                            <Link to='/about'>О компании</Link>
+                            <Link to='/howitworks'>Как это работает</Link>
                         </div>
                     </div> 
                     <div className="footer-social-links123">

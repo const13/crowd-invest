@@ -12,14 +12,13 @@ import Partners from './partners/Partners';
 import CollapsibleBlock from '../collapsibleBlock/CollapsibleBlock';
 
 interface Props {
-    showAddons?: boolean
     noScheme?: boolean
     about?: boolean
 }
 
 export class Howitworks extends React.Component<Props> {
     render () {
-        let { about, noScheme, showAddons } = this.props;
+        let { about, noScheme } = this.props;
         const howitworksClass = `howitworks ${about ? 'horizontal' : null}`;
         const stepsClass = `howitworks-steps ${about ? 'horizontal' : null}`;
         const containerClass = `howitworks-steps-container ${about ? 'horizontal' : null}`;
